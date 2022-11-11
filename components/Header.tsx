@@ -66,7 +66,7 @@ function Header() {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center cursor-pointer pr-2"
+        className="flex flex-row items-center cursor-pointer pr-5"
       >
         <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
         <p className="hidden md:inline-flex uppercase text-gray-400 text-sm">
