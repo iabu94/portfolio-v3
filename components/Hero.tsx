@@ -14,7 +14,7 @@ function Hero({ pageInfo }: Props) {
       `<ButLovesToCodeMore />`,
     ],
     loop: true,
-    delaySpeed: 2000,
+    delaySpeed: 1500,
     deleteSpeed: 20,
   });
   return (
