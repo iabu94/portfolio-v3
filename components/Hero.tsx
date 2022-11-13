@@ -1,16 +1,15 @@
 import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
 
 type Props = {
-  pageInfo: PageInfo;
+  pageInfo: Partial<PageInfo>;
 };
 
 function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
-      `Hi, The Name's ${pageInfo.name}`,
+      `Hi, The Name's ${pageInfo?.name}`,
       `Guy-who-loves-coffee.ts`,
       `<ButLovesToCodeMore />`,
     ],
@@ -22,12 +21,12 @@ function Hero({ pageInfo }: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <img
         className="relative rounded-full h-32 w-32 mx-auto"
-        src={urlFor(pageInfo.heroImage).url()}
-        alt={pageInfo.name}
+        src={pageInfo.profilePic}
+        alt={pageInfo?.name}
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-400 pb-2 tracking-[15px]">
-          {pageInfo.role}
+          {pageInfo?.role}
         </h2>
         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold px-10">
           <span>{text}</span>

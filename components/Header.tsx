@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
+import React from 'react'
 
 function Header() {
   return (
